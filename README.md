@@ -1,0 +1,2 @@
+# EFLanguage
+Language setting
