@@ -12,7 +12,7 @@ private let kUserLanguage = "AppleLanguages"
 /**
  *  国际化工具
  */
-class EFLanguager: NSObject {
+public class EFLanguager: NSObject {
     private static var __once: () = {
             Static.staticInstance = EFLanguager()
         }()
@@ -61,13 +61,13 @@ class EFLanguager: NSObject {
     }
     
     // 单列
-    class func standardLanguager()->EFLanguager{
+    public class func standardLanguager()->EFLanguager{
         _ = EFLanguager.__once
         return Static.staticInstance!
     }
     
     //初始化
-    func initLanguages(){
+    public func initLanguages(){
         var language = (UserDefaults.standard.object(forKey: kUserLanguage) as! Array<String>)[0]
         
         if (language.range(of: "zh-Hans") != nil){
@@ -89,21 +89,21 @@ class EFLanguager: NSObject {
     /**
      获取当前语言的storyboard
      */
-    func storyboard(_ name:String)->UIStoryboard{
+    public func storyboard(_ name:String)->UIStoryboard{
         return UIStoryboard(name: name, bundle: self.currentLanguageBundle)
     }
     
     /**
      获取当前语言的nib
      */
-    func nib(_ name:String)->UINib{
+    public func nib(_ name:String)->UINib{
         return UINib(nibName: name, bundle: self.currentLanguageBundle)
     }
     
     /**
      获取当前语言的string
      */
-    func string(_ key:String) -> String {
+    public func string(_ key:String) -> String {
         if let str = self.currentLanguageBundle?.localizedString(forKey: key, value: nil, table: nil){
             return str
         }
@@ -113,17 +113,18 @@ class EFLanguager: NSObject {
     /**
      获取当前语言的image,注意，此处加载的是2x图片
      */
-    func image(_ name:String) -> UIImage? {
+    public func image(_ name:String) -> UIImage? {
         let path = self.currentLanguageBundle?.path(forResource: name + "@2x", ofType: "png")
         return UIImage(contentsOfFile: path!)
     }
 }
 
-func localized(_ key:String) -> String {
+
+public func localized(_ key:String) -> String {
     return EFLanguager.standardLanguager().string(key)
 }
 
-func localizedImage(_ key:String)->UIImage? {
+public func localizedImage(_ key:String)->UIImage? {
     return EFLanguager.standardLanguager().image(key)
 }
 
