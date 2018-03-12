@@ -6,13 +6,15 @@
 //  Copyright © 2018 Hunan EEfung Software Co., Ltd. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
 private let kUserLanguage = "AppleLanguages"
 
 /**
  *  国际化工具
  */
-public class EFLanguage {
+
+public class EFLanguage: NSObject {
     private static var __once: () = {
             Static.staticInstance = EFLanguage()
         }()
@@ -89,7 +91,7 @@ public class EFLanguage {
     /**
      获取当前语言的storyboard
      */
-    public func storyboard(_ name:String)->UIStoryboard{
+    public func storyboard(_ name:String)-> UIStoryboard {
         return UIStoryboard(name: name, bundle: self.currentLanguageBundle)
     }
     
