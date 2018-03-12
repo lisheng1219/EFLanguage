@@ -33,7 +33,7 @@ public class EFLanguage: NSObject {
     internal var currentLanguageBundle:Bundle?
     
     // 当前语言获取与切换
-    var currentLanguage:String {
+    open var currentLanguage:String {
         get{
             if(self._currentLanguage==nil){
                 self._currentLanguage = (UserDefaults.standard.value(forKey: kUserLanguage) as! Array<String>)[0]
