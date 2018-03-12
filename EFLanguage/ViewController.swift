@@ -12,7 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        EFLanguager.initLanguages(<#T##EFLanguager#>)
+        EFLanguage.standardLanguage().currentLanguage = "zh-ns"
+        
     }
 
     override func didReceiveMemoryWarning() {

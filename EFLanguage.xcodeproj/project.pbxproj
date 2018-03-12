@@ -12,10 +12,10 @@
 		1A51AFCF205622EA006A0B0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A51AFCD205622EA006A0B0C /* Main.storyboard */; };
 		1A51AFD1205622EA006A0B0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A51AFD0205622EA006A0B0C /* Assets.xcassets */; };
 		1A51AFD4205622EA006A0B0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A51AFD2205622EA006A0B0C /* LaunchScreen.storyboard */; };
-		1A51AFE0205628DE006A0B0C /* UIImageView+EFLanguager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A51AFDC205628DE006A0B0C /* UIImageView+EFLanguager.swift */; };
+		1A51AFE0205628DE006A0B0C /* UIImageView+EFLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A51AFDC205628DE006A0B0C /* UIImageView+EFLanguage.swift */; };
 		1A51AFE1205628DE006A0B0C /* NSBundle+EFLanauage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A51AFDD205628DE006A0B0C /* NSBundle+EFLanauage.swift */; };
-		1A51AFE2205628DE006A0B0C /* EFLanguager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A51AFDE205628DE006A0B0C /* EFLanguager.swift */; };
-		1A51AFE3205628DE006A0B0C /* UITextView+EFLanguageer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A51AFDF205628DE006A0B0C /* UITextView+EFLanguageer.swift */; };
+		1A51AFE2205628DE006A0B0C /* EFLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A51AFDE205628DE006A0B0C /* EFLanguage.swift */; };
+		1A51AFE3205628DE006A0B0C /* UITextView+EFLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A51AFDF205628DE006A0B0C /* UITextView+EFLanguage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +26,10 @@
 		1A51AFD0205622EA006A0B0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A51AFD3205622EA006A0B0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A51AFD5205622EA006A0B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A51AFDC205628DE006A0B0C /* UIImageView+EFLanguager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+EFLanguager.swift"; sourceTree = "<group>"; };
+		1A51AFDC205628DE006A0B0C /* UIImageView+EFLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+EFLanguage.swift"; sourceTree = "<group>"; };
 		1A51AFDD205628DE006A0B0C /* NSBundle+EFLanauage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBundle+EFLanauage.swift"; sourceTree = "<group>"; };
-		1A51AFDE205628DE006A0B0C /* EFLanguager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFLanguager.swift; sourceTree = "<group>"; };
-		1A51AFDF205628DE006A0B0C /* UITextView+EFLanguageer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+EFLanguageer.swift"; sourceTree = "<group>"; };
+		1A51AFDE205628DE006A0B0C /* EFLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFLanguage.swift; sourceTree = "<group>"; };
+		1A51AFDF205628DE006A0B0C /* UITextView+EFLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+EFLanguage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +76,10 @@
 		1A51AFDB205628DE006A0B0C /* Bundle */ = {
 			isa = PBXGroup;
 			children = (
-				1A51AFDC205628DE006A0B0C /* UIImageView+EFLanguager.swift */,
+				1A51AFDC205628DE006A0B0C /* UIImageView+EFLanguage.swift */,
 				1A51AFDD205628DE006A0B0C /* NSBundle+EFLanauage.swift */,
-				1A51AFDE205628DE006A0B0C /* EFLanguager.swift */,
-				1A51AFDF205628DE006A0B0C /* UITextView+EFLanguageer.swift */,
+				1A51AFDE205628DE006A0B0C /* EFLanguage.swift */,
+				1A51AFDF205628DE006A0B0C /* UITextView+EFLanguage.swift */,
 			);
 			name = Bundle;
 			path = EFLanguage/Bundle;
@@ -160,9 +160,9 @@
 				1A51AFCC205622EA006A0B0C /* ViewController.swift in Sources */,
 				1A51AFCA205622EA006A0B0C /* AppDelegate.swift in Sources */,
 				1A51AFE1205628DE006A0B0C /* NSBundle+EFLanauage.swift in Sources */,
-				1A51AFE0205628DE006A0B0C /* UIImageView+EFLanguager.swift in Sources */,
-				1A51AFE3205628DE006A0B0C /* UITextView+EFLanguageer.swift in Sources */,
-				1A51AFE2205628DE006A0B0C /* EFLanguager.swift in Sources */,
+				1A51AFE0205628DE006A0B0C /* UIImageView+EFLanguage.swift in Sources */,
+				1A51AFE3205628DE006A0B0C /* UITextView+EFLanguage.swift in Sources */,
+				1A51AFE2205628DE006A0B0C /* EFLanguage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

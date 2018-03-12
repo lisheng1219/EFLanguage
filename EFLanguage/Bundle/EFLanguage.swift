@@ -6,19 +6,19 @@
 //  Copyright © 2018 Hunan EEfung Software Co., Ltd. All rights reserved.
 //
 
-import UIKit
+import Foundation
 private let kUserLanguage = "AppleLanguages"
 
 /**
  *  国际化工具
  */
-public class EFLanguager: NSObject {
+public class EFLanguage {
     private static var __once: () = {
-            Static.staticInstance = EFLanguager()
+            Static.staticInstance = EFLanguage()
         }()
     fileprivate struct Static {
         static var onceToken : Int = 0
-        static var staticInstance : EFLanguager? = nil
+        static var staticInstance : EFLanguage? = nil
     }
     fileprivate var _currentLanguage:String?
     
@@ -61,8 +61,8 @@ public class EFLanguager: NSObject {
     }
     
     // 单列
-    public class func standardLanguager()->EFLanguager{
-        _ = EFLanguager.__once
+    public class func standardLanguage()->EFLanguage{
+        _ = EFLanguage.__once
         return Static.staticInstance!
     }
     
@@ -82,7 +82,7 @@ public class EFLanguager: NSObject {
         } else {
             //如果不支持当前语言则加载info中Localization native development region中的值的lporj,设置为当前语言
             self.currentLanguage = (Bundle.main.infoDictionary! as NSDictionary).value(forKey: kCFBundleDevelopmentRegionKey as String) as! String
-            print("Languager:\(language)不支持，切换成默认语言\(self._currentLanguage!)")
+            print("Language:\(language)不支持，切换成默认语言\(self._currentLanguage!)")
         }
     }
     
@@ -121,11 +121,11 @@ public class EFLanguager: NSObject {
 
 
 public func localized(_ key:String) -> String {
-    return EFLanguager.standardLanguager().string(key)
+    return EFLanguage.standardLanguage().string(key)
 }
 
 public func localizedImage(_ key:String)->UIImage? {
-    return EFLanguager.standardLanguager().image(key)
+    return EFLanguage.standardLanguage().image(key)
 }
 
 

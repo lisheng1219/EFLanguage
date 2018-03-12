@@ -1,5 +1,5 @@
 //
-//  UIImageView+EFLanguager.swift
+//  UIImageView+EFLanguage.swift
 //  EFLanguage
 //
 //  Created by lisheng on 12/03/2018.

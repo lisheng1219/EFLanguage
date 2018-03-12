@@ -36,6 +36,6 @@ extension Bundle {
     
     //当前语言的bundle
     func languageBundle() -> Bundle? {
-        return EFLanguager.standardLanguager().currentLanguageBundle
+        return EFLanguage.standardLanguage().currentLanguageBundle
     }
 }
