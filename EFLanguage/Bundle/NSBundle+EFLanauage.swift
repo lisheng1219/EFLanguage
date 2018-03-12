@@ -1,9 +1,9 @@
 //
-//  NSBundle+Lanauage.swift
-//  LocalDemo
+//  NSBundle+EFLanauage.swift
+//  EFLanguage
 //
-//  Created by gongkai on 15/6/4.
-//  Copyright (c) 2015年 gongkai. All rights reserved.
+//  Created by lisheng on 12/03/2018.
+//  Copyright © 2018 Hunan EEfung Software Co., Ltd. All rights reserved.
 //
 
 import Foundation

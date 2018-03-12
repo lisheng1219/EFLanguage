@@ -1,10 +1,11 @@
 //
-//  Languager.swift
-//  icar
+//  EFLanauage.swift
+//  EFLanguage
 //
-//  Created by gongkai on 15/5/18.
-//  Copyright (c) 2015年 anytracking. All rights reserved.
+//  Created by lisheng on 12/03/2018.
+//  Copyright © 2018 Hunan EEfung Software Co., Ltd. All rights reserved.
 //
+
 import UIKit
 private let kUserLanguage = "AppleLanguages"
 
