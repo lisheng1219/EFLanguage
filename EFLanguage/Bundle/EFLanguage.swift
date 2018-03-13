@@ -9,6 +9,9 @@
 import UIKit
 
 private let kUserLanguage = "AppleLanguages"
+private let lprojType = "lproj"
+private let zh_Hans = "zh-Hans"
+private let en = "en"
 
 /**
  *  国际化工具
@@ -44,14 +47,14 @@ public class EFLanguage: NSObject {
             if(self._currentLanguage == newLanguage){
                 return
             }
-            if let path = Bundle.main.path(forResource: newLanguage, ofType: "lproj" ),let bundel = Bundle(path:path){
+            if let path = Bundle.main.path(forResource: newLanguage, ofType: lprojType ),let bundel = Bundle(path:path){
                 self.currentLanguageBundle = bundel
                 self._currentLanguage = newLanguage
             }
             else{
                 //如果不支持当前语言则加载info中Localization native development region中的值的lporj
                 let defaultLanguage = (Bundle.main.infoDictionary! as NSDictionary).value(forKey: kCFBundleDevelopmentRegionKey as String) as! String
-                self.currentLanguageBundle =  Bundle(path:Bundle.main.path(forResource: defaultLanguage, ofType: "lproj" )!)
+                self.currentLanguageBundle =  Bundle(path:Bundle.main.path(forResource: defaultLanguage, ofType: lprojType )!)
                 self._currentLanguage = defaultLanguage
             }
             let def = UserDefaults.standard
@@ -72,13 +75,13 @@ public class EFLanguage: NSObject {
     public func initLanguages(){
         var language = (UserDefaults.standard.object(forKey: kUserLanguage) as! Array<String>)[0]
         
-        if (language.range(of: "zh-Hans") != nil){
-            language = "zh-Hans"
+        if (language.range(of: zh_Hans) != nil){
+            language = zh_Hans
         }else{
-            language = "en"
+            language = en
         }
         
-        if let path = Bundle.main.path(forResource: language, ofType: "lproj" ),let bundel = Bundle(path:path) {
+        if let path = Bundle.main.path(forResource: language, ofType: lprojType ),let bundel = Bundle(path:path) {
             self.currentLanguageBundle = bundel
             self._currentLanguage = language
         } else {
