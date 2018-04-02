@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'EFLanguage'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'Basic language setting function.'
  
   s.description      = <<-DESC
@@ -12,7 +12,7 @@ Basic language setting function. you can easy to setting you language
   s.author           = { 'lisheng' => 'lis_02@163.com' }
   s.source           = { :git => 'https://github.com/lisheng1219/EFLanguage.git', :tag => s.version.to_s }
  
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '9.3'
   s.source_files = 'EFLanguage/Bundle/*.swift'
   s.swift_version    = '4.0'
  
